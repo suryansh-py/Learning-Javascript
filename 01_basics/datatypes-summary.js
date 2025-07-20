@@ -25,7 +25,7 @@ console.log(typeof outsideTemp); //object
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
+    name: "suryansh",
     age: 22,
 }
 
