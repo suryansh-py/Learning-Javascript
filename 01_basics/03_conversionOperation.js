@@ -29,7 +29,7 @@ let booleanIsLoggedIn = Boolean(isLoggedIn) //Boolean is written to convert anyt
 // 1 => true; 0 => false
 // "" => false
 // "hitesh" => true
-// Remember [ "",0,-0,0n,null,undefined,NaN are converted to False]
+// Remember [ "",0,-0,0n,null,undefined,NaN are converted to False] FALSY VALUES
 // All other values are converted to true.
 
 

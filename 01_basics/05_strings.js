@@ -1,4 +1,7 @@
-const name = "hitesh"
+// Strings are indexed
+// 'Hello World'[1] //e
+
+const name = "Suryansh"
 const repoCount = 50
 
 // console.log(name + repoCount + " Value");  Not used in modern day
@@ -6,7 +9,7 @@ const repoCount = 50
 console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 // this is called String Interpolation, use backticks " ` " ${} ... This is modern way :)
 
-const gameName = new String('hitesh-hc-com') // () is the String Constructor
+const gameName = new String('Riot-Valorant') // () is the String Constructor
 console.log(typeof gameName); //object
 
 
@@ -25,15 +28,13 @@ const anotherString = gameName.slice(-8, 4) //-ve values are allowed & last valu
 //  Extracts a section of string & returns it as a new string, without modifying the original string 
 console.log(anotherString); // ite
 
-const newStringOne = "   hitesh    "
+const newStringOne = "   Suryansh    "
 console.log(newStringOne);
 console.log(newStringOne.trim()); // trim removes extra-whitespaces
 
-const url = "https://hitesh.com/hitesh%20choudhary"
-
-console.log(url.replace('%20', '-'))
-
-console.log(url.includes('sundar'))
+const url = "https://github.com/suryansh-py"
+console.log(url.replace('py', 'yadav'))
+console.log(url.includes('xyz')) //false
 
 console.log(gameName.split('-')); // divides the string into a ordered list of substrings, put these substrings into an array, and returns the array.
 // The original string in not modified.
