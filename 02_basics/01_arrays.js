@@ -44,3 +44,17 @@ console.log("B ", myArr);
 const myn2 = myArr.splice(1, 3)
 console.log("C ", myArr);
 console.log(myn2);
+
+// slice() — Copy karta hai (Non-destructive)
+//slice(start, end) → Returns a new array from index start to end - 1.
+// Original array ko change nahi karta
+// Negative index support karta hai
+// Mostly copy banane ke liye use hota hai
+
+// splice() — Cut & Paste karta hai (Destructive)
+//splice(start, deleteCount, item1, item2, ...)
+// Original array ko change karta hai
+// Delete bhi karta hai, insert bhi karta hai
+// Return karta hai: deleted elements ka array
+
+
