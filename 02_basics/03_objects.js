@@ -1,22 +1,20 @@
 // To declare objects, we have 2 ways : as Literal or as Constructor
-
 // when we create a Constructor, we get a singleton object
 // Note : Jb vi hm Literals ki trh declare krte h toh Singleton nhi bnta hai, constructor se hmesha Singleton bnega
 
 // Object.create   #Constructor Method
 
+
 // object literals
 
 const mySym = Symbol("key1")
-
-
 const JsUser = {
-    name: "Hitesh",
-    "full name": "Hitesh Choudhary",
+    name: "Suryansh",
+    "full name": "Suryansh Yadav",
     [mySym]: "mykey1",
-    age: 18,
-    location: "Jaipur",
-    email: "hitesh@google.com",
+    age: 22,
+    location: "Noida",
+    email: "suryansh@google.com",
     isLoggedIn: false,
     lastLoginDays: ["Monday", "Saturday"]
 }
@@ -28,9 +26,9 @@ const JsUser = {
 // console.log(JsUser["full name"])
 // console.log(JsUser[mySym])  *to access as a symbol, write key name in [ ]
 
-JsUser.email = "hitesh@chatgpt.com"
+JsUser.email = "Suryansh@chatgpt.com"
 // Object.freeze(JsUser)
-JsUser.email = "hitesh@microsoft.com"
+JsUser.email = "Suryansh@microsoft.com"
 // console.log(JsUser);
 
 JsUser.greeting = function(){
