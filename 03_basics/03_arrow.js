@@ -35,11 +35,21 @@
 // Jab new use hota hai, this naya object banata hai.
 
 
-// 1. Arrow Functions have NO this
+// 0. Arrow Functions have NO this
 // Arrow functions apna this create nahi karte.
 // Wo apne lexical scope ka this use karte hain (matlab jo surrounding function ya object ka this hai).
 
+// 1. Basic Syntax
+// Normal Function:
+// function add(a, b) {
+//   return a + b;
+// }
 
+// Arrow Function:
+// const add = (a, b) => a + b;
+
+// function keyword nahi lagana padta.
+// Agar ek hi return statement ho, to {} aur return bhi hata sakte ho. // Implicit Return
 
 
 
@@ -72,30 +82,32 @@ const user = {
 //     console.log(this.username);
 // }
 
-
 // Arrow Function
 const chai =  () => {
     let username = "hitesh"
     console.log(this);
 }
-
-
 // chai()
 
 // const addTwo = (num1, num2) => {
 //     return num1 + num2
 // }
+// Curly Braces use kiya ,toh return keyword likhna hi pdegaa
 
 // const addTwo = (num1, num2) =>  num1 + num2
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+// const addTwo = (num1, num2) => ( num1 + num2 ) // agr parenthesis use kr rhe h , toh return statement nhi likhna pdta hai #UsedinReact
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
-
-
+const addTwo = (num1, num2) => ({username: "suryansh"})
 console.log(addTwo(3, 4))
 
 
 // const myArray = [2, 5, 3, 7, 8]
-
 // myArray.forEach()
+
+
+// Trying to write an arrow function
+const addThree = (num1, num2, num3) => {
+    return num1 + num2 + num3
+}
+console.log(addThree(3,4,5));
