@@ -158,9 +158,7 @@ function one(){
     // console.log(website);
 
      two()
-
 }
-
 // one()
 
 if (true) {
@@ -171,7 +169,6 @@ if (true) {
     }
     // console.log(website);
 }
-
 // console.log(username);
 
 
@@ -179,14 +176,12 @@ if (true) {
 
 
 console.log(addone(5))
-
 function addone(num){
     return num + 1
 }
 
 
-
-addTwo(5)
+addTwo(5) // Hoisting Issue
 const addTwo = function(num){
     return num + 2
 }
