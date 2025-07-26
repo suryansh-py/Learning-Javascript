@@ -17,9 +17,7 @@ const temperature = 41
 //     let power = "fly"
 //     console.log(`User power: ${power}`);
 // }
-
 // console.log(`User power: ${power}`);
-
 
 // const balance = 1000
 
