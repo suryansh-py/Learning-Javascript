@@ -1,3 +1,43 @@
+// 1. Types of Loops
+// JavaScript me sabse common 6 types ke loops hote hain:
+// for loop
+// while loop
+// do...while loop
+// for...in loop
+// for...of loop
+// forEach() method (Array specific)
+
+
+// 1. for loop
+//      for (initialization; condition; increment/decrement) {
+//        code block
+//      }
+
+// 2. while loop                ( Jab tak condition true hai tab tak loop chalega)
+//      while (condition) {
+//      code block
+//      }
+
+// 3. do...while loop           (do...while me code pehle run hota hai, fir condition check hoti hai.)
+//      do {
+//         code block
+//      } while (condition);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // for
 
 for (let i = 0; i <= 10; i++) {
