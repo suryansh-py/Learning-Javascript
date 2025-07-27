@@ -23,18 +23,52 @@
 //         code block
 //      } while (condition);
 
+// 4. for...in loop (Objects ke liye)
+// Object ke keys (properties) iterate karne ke liye use hota hai.
 
+// const user = { name: "Suryansh", age: 22, country: "India" };
+// for (let key in user) {
+//   console.log(key, ":", user[key]);
+// }
+// Output
+// name : Suryansh
+// age : 22
+// country : India
 
+// 5. for...of loop (Iterables ke liye)
+// Arrays, Strings, Maps, Sets iterate karne ke liye use hota hai.
 
+// const arr = [10, 20, 30];
+// for (let value of arr) {
+//   console.log(value);
+// }
+// Output: 10 20 30
 
+// 6. forEach() (Array Method)
+// forEach() array ke har element ke liye ek callback run karta hai.
+// Note: break or continue use nahi kar sakte.
 
+// const nums = [1, 2, 3];
+// nums.forEach((num, index) => {
+//   console.log(`Index ${index} = ${num}`);
+// });
 
+// 7. break and continue
+// break:
+// Loop ko poora stop kar deta hai.
+// for (let i = 1; i <= 5; i++) {
+//   if (i === 3) break;
+//   console.log(i);
+// }
+// Output: 1 2
 
-
-
-
-
-
+// continue:
+// Current iteration ko skip karta hai.
+// for (let i = 1; i <= 5; i++) {
+//   if (i === 3) continue;
+//   console.log(i);
+// }
+// Output: 1 2 4 5
 
 
 
