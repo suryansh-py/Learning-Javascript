@@ -1,3 +1,35 @@
+<!-- DOM = Document Object Model
+Ek tree structure hai jo aapke HTML document ko objects ke form me represent karta hai — taaki JavaScript usse read/write kar sake. -->
+<!-- <html>
+  <body>
+    <h1>Hello</h1>
+  </body>
+</html> -->
+
+<!-- Iska DOM structure kuch aisa hota hai:
+Document
+ └── html
+      └── body
+           └── h1 (text: "Hello") -->
+
+<!-- DOM ka Kaam
+JavaScript DOM ke through:
+Kaam	                Example
+Elements select karna	document.querySelector('h1')
+Content change karna	element.textContent = "Bye"
+Attribute change karna	element.setAttribute()
+CSS styling	            element.style.color = 'red'
+Element add/remove	    append(), remove() etc.
+Events handle karna	    element.addEventListener() -->
+
+<!-- DOM Tree & Nodes
+document → root object
+Everything in HTML is a node (element node, text node, comment node)
+Tree traversal:
+parentNode
+childNodes
+firstChild, lastChild, nextSibling, etc. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
