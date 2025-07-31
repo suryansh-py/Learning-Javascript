@@ -35,7 +35,7 @@ const promiseFour = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = true
         if (!error) {
-            resolve({username: "hitesh", password: "123"})
+            resolve({username: "suryansh", password: "123"})
         } else {
             reject('ERROR: Something went wrong')
         }
@@ -89,7 +89,7 @@ consumePromiseFive()
 
 //getAllUsers()
 
-fetch('https://api.github.com/users/hiteshchoudhary')
+fetch('https://api.github.com/users/suryansh-py')
 .then((response) => {
     return response.json()
 })
