@@ -12,6 +12,7 @@
     </ul>
 </body>
 <script>
+    // Here we are traversing the entire tree
     function addLanguage(langName){
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
@@ -20,6 +21,7 @@
     addLanguage("python")
     addLanguage("typescript")
 
+    // Optimized approach (Always try using appendChild method)
     function addOptiLanguage(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))
