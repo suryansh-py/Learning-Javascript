@@ -30,6 +30,69 @@ parentNode
 childNodes
 firstChild, lastChild, nextSibling, etc. -->
 
+
+<!-- DOM Access Methods
+# Old School
+document.getElementById("id");
+document.getElementsByClassName("class");
+document.getElementsByTagName("p");
+
+# Modern (CSS selectors)
+document.querySelector(".class");
+document.querySelectorAll("p");
+⚡ querySelector() → first match
+⚡ querySelectorAll() → NodeList (loop karna padega) -->
+
+<!-- DOM Manipulation in JavaScript 
+ 1. Changing Content
+element.textContent = "New Text"; // only text
+element.innerHTML = "<b>Bold</b>"; // HTML allowed    [⚠ Security Risk: XSS attack ka chance agar user input ko direct use karo.]     
+element.innerText                   //Sirf visible text (CSS ke hisaab se) return karega [textContent se thoda slow hai]
+
+2. Changing Attributes
+
+element.setAttribute("src", "image.jpg");
+element.getAttribute("id");
+element.removeAttribute("target");
+
+3. Changing CSS Styles
+element.style.color = "red";
+element.style.backgroundColor = "yellow";
+
+CSS Class Add/Remove/Toggle
+element.classList.add("active");
+element.classList.remove("hidden");
+element.classList.toggle("dark-mode");
+
+4. Create & Add Elements
+(i) document.createElement()
+document.createElement("div");
+div.textContent = "Hello World";
+
+(ii) appendChild()
+    document.body.appendChild(newDiv);
+
+(iii) insertBefore()
+parent.insertBefore(newElement, referenceElement);
+
+5. Remove Elements
+element.remove(); // Modern
+parent.removeChild(child); // Old
+
+6. Replacing Elements
+parent.replaceChild(newElement, oldElement);
+
+7. Traversing DOM
+element.parentNode
+element.children
+element.firstElementChild
+element.lastElementChild
+element.nextElementSibling
+element.previousElementSibling
+  -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

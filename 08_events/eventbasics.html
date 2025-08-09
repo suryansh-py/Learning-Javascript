@@ -1,0 +1,127 @@
+<!--
+📌 DOM Events in JavaScript
+Event = Browser me koi activity ya action, jaise:
+User click kare
+Key press ho
+Page load ho
+Mouse move kare
+Form submit ho
+Ya phir JavaScript ke through trigger kiya gaya custom action
+Event Handling = JavaScript se kisi element pe react karna jab event occur ho.
+
+1️⃣ Event Types
+Category	                    Examples
+Mouse Events	                click, dblclick, mousedown, mouseup, mouseover, mouseout, mousemove
+Keyboard Events	              keydown, keyup
+Form Events	                  submit, change, input, focus, blur
+Window Events	                load, resize, scroll, unload
+Clipboard Events	            copy, cut, paste
+Touch Events (Mobile)	        touchstart, touchend, touchmove
+Drag & Drop Events            dragstart, drag, dragend, dragenter, dragover, dragleave, drop
+Media Events                  play, pause, ended, timeupdate, volumechange
+
+
+2️⃣ Event Binding Methods
+(a) HTML Attribute Method ❌ (old school)
+<button onclick="alert('Hello!')">Click Me</button>
+⚠ Drawback: HTML & JS mixed, not clean.
+
+(b) DOM Property Method
+document.getElementById("btn").onclick = function() {
+  alert("Button Clicked");
+};
+⚠ Limitation: Only one handler allowed — overwrite ho jata hai.
+
+(c) addEventListener (Modern ✅)
+document.getElementById("btn").addEventListener("click", function() {
+  alert("Button Clicked");
+});
+✅ Multiple handlers possible
+✅ Remove kar sakte ho
+✅ Event capturing/bubbling control
+
+
+3️⃣ Event Object
+Jab event hota hai, browser automatically ek Event Object banata hai jo details rakhta hai.
+Example:
+document.addEventListener("click", function(event) {
+  console.log(event.type); // "click"
+  console.log(event.target); // jis element pe click hua
+  console.log(event.clientX, event.clientY); // click position
+});
+
+
+4️⃣ Event Flow (Capturing & Bubbling)
+Event jab trigger hota hai, DOM me 3 phases hoti hain:
+
+Capturing Phase (outer → inner)
+Target Phase (actual element)
+Bubbling Phase (inner → outer)
+
+Default = Bubbling
+addEventListener(event, handler, true) → capturing mode enable
+
+Example:
+parent.addEventListener("click", () => console.log("Parent"), true); // capturing
+child.addEventListener("click", () => console.log("Child")); // bubbling
+
+
+5️⃣ Event Delegation (Interview Favorite 💡)
+Instead of attaching events to multiple child elements, hum parent pe ek event listener lagate hain aur event.target se check karte hain kaunsa child clicked hua.
+
+document.getElementById("list").addEventListener("click", function(e) {
+  if (e.target.tagName === "LI") {
+    console.log("Clicked:", e.target.textContent);
+  }
+});
+✅ Improves performance
+✅ Handles dynamically added elements
+
+
+6️⃣ Removing Event Listener
+function greet() {
+  console.log("Hello");
+}
+btn.addEventListener("click", greet);
+btn.removeEventListener("click", greet);
+⚠ Note: Remove karne ke liye same function reference dena padta hai (anonymous function remove nahi hota).
+
+
+7️⃣ Preventing Default Behavior
+document.querySelector("a").addEventListener("click", function(e) {
+  e.preventDefault(); // link navigation stop
+});
+
+
+8️⃣ Hidden Facts
+(i)   onclick overwrites old handlers, but addEventListener stack karta hai.
+(ii)  Some events bubble nahi karte (e.g., focus, blur).
+(iii) stopPropagation() → event ko next element me jane se rokta hai.
+(iv)  stopImmediatePropagation() → baaki same element ke handlers bhi stop.
+
+9️⃣ Best Practices
+Always use addEventListener
+For dynamic content → use Event Delegation
+Remove listeners when not needed (memory leak prevention)
+Avoid inline onclick in HTML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
