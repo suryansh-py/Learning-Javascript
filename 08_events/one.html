@@ -19,27 +19,49 @@
    </div>
 </body>
 <script>
+    // OLD PRACTICE
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
 
-     // attachEvent()
+    // 
+    // attachEvent()  -- Used for Internet Explorer back in time
     // jQuery - on
 
+    // Things to study in Event Object :-
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
+    // NEW PRACTICE (Event object, )
+    // Event Propagation has 2 contexts :-
+    // 1. Event Bubbling (false) -- Bottom to Top -- MOST WIDELY USED #(Default = Bubbling)
+    // 2. Event Capturing (true) -- Top to bottom
+
+
+    //A/ document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
+    //B/ document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
     //     e.stopPropagation()
     // }, false)
     
+    // When A & B are executed & if i click on owl image, then
+    // if 'false' is written --> then it will show in console [owl clicked (then) clicked inside the ul]
+    // This is Event Bubbling
+
+    // if 'true' is written --> then it will show in console [clicked inside the ul (then) owl clicked]
+    // This is Event Capturing
+
+    // Sometimes we dont want Event bubbling to occur , the inner elements are separate from the outer elements
+    // In that case , we use e.stopPropagation() method to stop event propagation to the top
+
+    // We also have another method called e.preventDefault() , this wil prevent the default behaviour -- In the example below
+    // when the google image is clicked, then it won't open the google webpage
+
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
@@ -47,6 +69,9 @@
     // }, false)
    
     
+
+    // TASK-1 Whenever user clicks on any of the image , the image should disappear
+    // Method-1
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
         if (e.target.tagName === 'IMG') {
@@ -54,10 +79,9 @@
             let removeIt = e.target.parentNode
             removeIt.remove()
         }
-    
-        
     })
-    
-    //removeIt.parentNode.removeChild(removeIt)
+
+    // Method-2
+    // removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
